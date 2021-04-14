@@ -1,9 +1,38 @@
-<html>
-  <head>
-    <title>My blog</title>
-  <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
-  </body>
-</html>
+  
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Lucas Foster's EDA Blog</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
+      <link href="styles/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+      <div id="header">
+        <div id="title">
+          <h1>Lucas Foster</h1>
+          <h2>This is a blog</h2>
+        </div>
+        <!-- <div class="navbar">
+          <a href="blog/post1.html" target="display"><button>Post 1</button></a>
+          <a href="blog/post1.html" target="display"><button>Post 2</button></a>
+          <a href="blog/post1.html" target="display"><button>Post 3</button></a>
+        </div> -->
+        <div class="navbar">
+          <form action="blog/post1.html" target="display">
+            <button>Post 1</button>
+          </form>
+          <form action="blog/post1.html" target="display">
+            <button>Post 2</button>
+          </form>
+          <form action="blog/post1.html" target="display">
+            <button>Post 3</button>
+          </form>
+        </div>
+      </div>
+      <div class="content">
+        <iframe name="display" src="blog/template.html" class="post-window"></iframe>
+      </div>
+    </body>
+  </html>
+  
