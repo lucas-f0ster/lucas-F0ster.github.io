@@ -34,7 +34,7 @@ body {
 
 #title h1 {
     font-family: "Zen Dots";
-    font-size: 55px;
+    font-size: 45px;
     margin-bottom: 0px;
     margin-top: 1%;
 }
@@ -48,7 +48,7 @@ body {
 
 #title img {
     width: auto;
-    max-height: 45px;
+    max-height: 35px;
     margin: 10px;
     flex: 1 1 auto;
 }
