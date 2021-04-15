@@ -10,23 +10,139 @@
     </head>
     <body>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script> <!--prism.js code to highlight code snippets-->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/1280px-Cat_poster_1.jpg">
-      <h1>Here's a heading</h1>
-      <h2>and a smaller one</h2>
-      <p>and a paragraph for fun<br>
-        With some code below</p>
-      <pre><code class="language-css">
-        .blog-post h2 {
-          font-family: "Roboto Slab";
-          font-weight: bold;
-          font-size: 22px;
-      }
-      
-      .blog-post p {
-          font-family: "Roboto";
-          font-size: 18px;
-      }      
-      </pre>
+      <div id="post-container">
+        <h1>Classes vs IDs</h1>
+        <br>
+        <p>We're writing some HTML code, making a sweet webpage like the one you're on
+          we're having a good time, got a few snazzy DIVs, a couple IMGs and maybe a few paragraphs for flavour.</p>
+          <p>But wait! All our little pieces (or <strong>elements</strong> if you're feeling fancy)
+          are sitting on the screen in a big vertical line, they're all plain and boring and while
+          they have all the information, they don't look very good!<br>
+          We're going to need to jazz them up a little, we're going to give them some <strong>style</strong>.
+        </p>
+        <div class="code-container">
+          <pre style="background: none; margin-left: -70px; margin-right: 0%; overflow: hidden;"><code class="language-css">
+          h1 {
+            font-family: "Zen Dots";
+            font-size: 30px;
+          }
+          h2 {
+              font-family: "Roboto";
+              font-weight: bold;
+              font-size: 20px;
+          }
+          p {
+              font-family: "Roboto";
+              font-size: 18px;
+          }
+          </code></pre>
+        </div>
+        <p>Yeah, like that!<br>
+        In fact, those are some of the styles for the page you're seeing right now! &#128521</p>
+        <p>If we take a look at that formatting, we can see some pieces that make sense; font-size does 
+          what it says, we can see names of fonts next to "font-family" and so on.</p>
+        <p>But what's with those little <strong>"h1"</strong> and <strong>"h2"</strong> bits? They're not in the brackets, so they must be important, right?<br>
+        Well they are! Those little headings are how we reference specific elements 
+        in the HTML code (the one that builds stuff) from our CSS code (the one that tells it how to look and behave).</p>
+        <p>But what does <strong>"h1"</strong> mean?<br>
+        Well, <strong>h1</strong> is a built in part of HTML, it's the highest level (meaning biggest, most important) heading - just like the ones you can choose in Word.<br>
+        There's an <strong>h1</strong> heading at the top of this page, you're reading a <strong>"p"</strong> (or paragraph) right now.</p>
+        <p>Getting the gist? CSS applies styles to HTML elements, and they need labels so the CSS can be identified.<br>
+        But what if we want to apply some CSS to something that ISN'T built into HTML? What if we want to apply a style to that snazzy 
+        block of code you just scrolled past?</p>
+        <p>Well for that, we need to describe that content, and for that we use either an ID or a Class, collectively these are known as <strong>"hooks"</strong>.<br>
+        So, how do we use these? What's the difference? What could they look like?</p>
+        <p>This ain't short, so <a href="#tldr">here's a quick link to a TL;DR</a> for the impatient reader</p>
+        <br>
+        <h2>How does a hook work?</h2>
+        <br>
+        <p>Just like you'd expect! When we create an element, we give it a hook to label it as something, so that our CSS or any other code we want to apply to it
+          will know how to find it. <br>
+          For example, this jumble of words lives inside a <code class="lang-html">div</code>, essentially a container to hold content.<br>
+          Text on its own looks super boring, though, like this mess down below:</p>
+          <br>
+          </div>
+          Here's some totally unformatted text, isn't it pretty?
+          <br>
+          <div id="post-container">
+          <p>So let's make our Div all nice and pretty. For that, we need to give it some style in our CSS file.<br>
+          But before that can happen, we need to give it a name so our CSS knows where its styles should go.</p>
+          <p>This means adding an ID name into our div (this one is called "post-container", for obvious reasons), which means our Div tag now looks like this:</p>
+          
+        <div class="code-container">
+          <pre style="background: none; margin-left: -70px; margin-top: -40px; margin-bottom: -40px; overflow: hidden;"><code class="language-html">
+            <script type="prism-html-markup">
+          <div id="post-container">
+            <p>some text</P>
+          </div>
+            </script>
+          </code></pre>
+        </div>
+        <p>Pretty easy, huh?<br>
+        Well, giving an element a Class works exactly the same way, check it out:</p>
+        <div class="code-container">
+          <pre style="background: none; margin-left: -70px; margin-top: -40px; margin-bottom: -40px; overflow: hidden;"><code class="language-html">
+            <script type="prism-html-markup">
+          <div class="post-container">
+            <p>some text</P>
+          </div>
+            </script>
+          </code></pre>
+        </div>
+        <p>Yep, you can literally just switch ID and Class around and things will work pretty much as they should.<br>
+        To refer to these two divs in our CSS, we just need to refer to either the Class or the ID, like this:</p>
+        <div class="code-container">
+          <pre style="background: none; margin-left: -70px; margin-top: -40px; margin-bottom: -40px; overflow: hidden;"><code class="language-css">
+            /*this is how to refer to an ID*/
+            
+            #post-container {
+              width: 60%;
+              margin-left: auto;
+              margin-right: auto;
+              background: #fff;
+              text-align: left;
+              padding-bottom: 50px;
+              padding-top: 50px;
+            }
+
+            /*and this is referring to a class*/
+
+            .post-container {
+              width: 60%;
+              margin-left: auto;
+              margin-right: auto;
+              background: #fff;
+              text-align: left;
+              padding-bottom: 50px;
+              padding-top: 50px;
+            }
+          </code></pre>
+        </div>
+        <p>Just like before, we really did just switch a "." for a "#", that's how easy it is!</p>
+        <br>
+        <h2>So what's the difference?</h2>
+        <br>
+        <p>Since an ID and a Class serve basically the same function, can be swapped by changing a whole one character on the HTML and the CSS files,
+        what's different about them? Why should you use one and not there other?</p>
+        <p>Well...</p>
+        <h2>An ID is unique and a Class is not</h2>
+        <p>There's your answer. An element can only have <strong>one</strong> ID, and an ID can only apply to <strong>one</strong> element on any given page,
+          while an element can have <strong>many</strong> classes and those classes can apply to <strong>many</strong> elements over and over.</p>
+        <p>This makes an ID very useful for something that appears once on a page (like the post-container that holds everything you see) while
+          a class is useful for applying code to an element that pops up lots of times (like the code-container holding those lovely code snippets).
+        </p>
+        <p>Technically, CSS doesn't actually care which one you use, it can apply the same styling to an ID or a Class. But if you want to use JavaScript,
+           that's where you'll have problems, since JavaScript really does care if you've thrown a dozen identical IDs around and will have a meltdown.<br>
+          The other thing that cares? Your browser! Your browser can see each ID and can jump straight to a specific ID using a # link (like index.html#your-ID),
+          but that's not going to work when that ID sends it to two places at once...</p>
+          <br>
+        <h2 id="tldr">Can we TL'DR this novel please? My head hurts..</h2>
+        <br>
+        <p style="text-align: center; font-weight: bold;">Sure we can!<br><br>IDs and Classes do the same job, they're written into HTML to tell other code where things are and where to do their work.<br>
+        Their difference is in how they're used, IDs are unique and for one element each while Classes aren't an can be used over and over for repeated elements.<br><br>
+        <br>
+        Got it? Good!</p>
+      </div>
     </body>
   </html>
   
