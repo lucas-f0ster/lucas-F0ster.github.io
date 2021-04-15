@@ -23,8 +23,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-size: 100% 100%;
-    background-image: url(Images/gradient.jpg);
 
 }
 
@@ -58,6 +56,8 @@ body {
 .navbar {
     display: flex;
     background: black;
+    background-size: 100% 100%;
+    background-image: url(../Images/gradient.jpg);
     flex-direction: row;
     align-items: center;
     justify-content: center;
