@@ -44,39 +44,31 @@
       In fact, those are some of the styles for the page you're seeing right now! &#128521</p>
     <p>If we take a look at that formatting, we can see some pieces that make sense; font-size does
       what it says, we can see names of fonts next to "font-family" and so on.</p>
-    <p>But what's with those little <strong>"h1"</strong> and <strong>"h2"</strong> bits? They're not in the brackets,
+    <p>But what's with those little <strong>h1</strong> and <strong>h2</strong> bits? They're not in the brackets,
       so they must be important, right?<br>
       Well they are! Those little headings are how we reference specific elements
       in the HTML code (the one that builds stuff) from our CSS code (the one that tells it how to look and behave).</p>
-    <p>But what does <strong>"h1"</strong> mean?<br>
+    <p>But what does <strong>h1</strong> mean?<br>
       Well, <strong>h1</strong> is a built in part of HTML, it's the highest level (meaning biggest, most important)
       heading - just like the ones you can choose in Word.<br>
-      There's an <strong>h1</strong> heading at the top of this page, you're reading a <strong>"p"</strong> (or
+      There's an <strong>h1</strong> heading at the top of this page, you're reading a <strong>p</strong> (or
       paragraph) right now.</p>
-    <p>Getting the gist? CSS applies styles to HTML elements, and they need labels so the CSS can be identified.<br>
-      But what if we want to apply some CSS to something that ISN'T built into HTML? What if we want to apply a style to
+    <p>Getting the gist? CSS tells HTML elements how to look and behave, and elements need labels so the HTML knows where to look in the CSS.</p>
+      <p>But what if we want to apply some CSS to something that ISN'T built into HTML? What if we want to apply a style to
       that snazzy
       block of code you just scrolled past?</p>
     <p>Well for that, we need to describe that content, and for that we use either an ID or a Class, collectively these
-      are known as <strong>"hooks"</strong>.<br>
-      So, how do we use these? What's the difference? What could they look like?</p>
+      are known as <strong>attributes</strong>.</p>
+      <p>how do we use these? What's the difference? What could they look like?</p>
     <p>This ain't short, so <a href="#tldr">here's a quick link to a TL;DR</a> for the impatient reader</p>
-    <br>
-    <h2>How does a hook work?</h2>
-    <br>
-    <p>Just like you'd expect! When we create an element, we give it a hook to label it as something, so that our CSS or
-      any other code we want to apply to it
-      will know how to find it. <br>
+    <h2>How does an attribute work?</h2>
+    <p>Just like you'd expect! When we create an element, we give it attributes to label it as something, so that when our HTML code looks for some styles
+      it will know how to find them.<br>
       For example, this jumble of words lives inside a <code class="lang-html">div</code>, essentially a container to
-      hold content.<br>
-      Text on its own looks super boring, though, like this mess down below:</p>
+      hold content.
     <br>
-  </div>
-  Here's some totally unformatted text, isn't it pretty?
-  <br>
-  <div id="post-container">
-    <p>So let's make our Div all nice and pretty. For that, we need to give it some style in our CSS file.<br>
-      But before that can happen, we need to give it a name so our CSS knows where its styles should go.</p>
+    <p>But a Div is just a block, it doesn't look like anything on its own. So let's make our Div all nice and pretty. For that, we need to give it some style in our CSS file.<br>
+      But before that can happen, we need to give it a name so it knows where its styles are.</p>
     <p>This means adding an ID name into our div (this one is called "post-container", for obvious reasons), which means
       our Div tag now looks like this:</p>
 
@@ -129,13 +121,11 @@
           }
           </code></pre>
     </div>
-    <p>Just like before, we really did just switch a "." for a "#", that's how easy it is!</p>
-    <br>
+    <p>Yes, we really did just switch a "." for a "#", that's how easy it is!</p>
     <h2>So what's the difference?</h2>
-    <br>
     <p>Since an ID and a Class serve basically the same function, can be swapped by changing a whole one character on
       the HTML and the CSS files,
-      what's different about them? Why should you use one and not there other?</p>
+      what's different about them? Why should you use one and not the other?</p>
     <p>Well...</p>
     <h2>An ID is unique and a Class is not</h2>
     <p>There's your answer. An element can only have <strong>one</strong> ID, and an ID can only apply to
@@ -148,13 +138,20 @@
       a class is useful for applying code to an element that pops up lots of times (like the code-container holding
       those lovely code snippets).
     </p>
-    <p>Technically, CSS doesn't actually care which one you use, it can apply the same styling to an ID or a Class. But
-      if you want to use JavaScript,
-      that's where you'll have problems, since JavaScript really does care if you've thrown a dozen identical IDs around
-      and will have a meltdown.<br>
-      The other thing that cares? Your browser! Your browser can see each ID and can jump straight to a specific ID
-      using a # link (like index.html#your-ID),
-      but that's not going to work when that ID sends it to two places at once...</p>
+    <p>Technically, CSS doesn't actually care which one you use, it can give the same styling to an ID or a Class. They achieve basically the
+      same function when it comes to applying styles.</p>
+      <h2>So it's more of a guideline than a rule?</h2>
+    <p>Nope! CSS may not care which you use, but some things will...</p>
+    <h2>Your browser</h2>
+    <p>Your browser <strong>does</strong> notice the difference. The key is that an ID is much more <strong>specific</strong>, your browser
+    knows that a Class can show up all over, so it basically ignores them, but it knows that IDs matter and will look for them on your page.<br>
+    This lets you do things like link directly to an ID on a page. That TL;DR link up at the top does just that, it links to that big bold section
+    down below just by looking for the "tldr" ID. Nifty, huh></p>
+    <h2>Scripts as well</h2>
+    <p>Want to use JavaScript? Of course you do! It does fancy, fun things that you wouldn't do with HTML</p>
+    <p>But have you been throwing the same ID all over your page?<br>
+    Well you're not going to have a good time... JavaScript can be told to look for an element by ID, much like your browser, but if that ID
+    shows up in a bunch of elements, it'll have no idea which one you really wanted it to play with and your website will be even more of a mess than this one...</p>
     <br>
     <h2 id="tldr">Can we TL'DR this novel please? My head hurts..</h2>
     <br>
