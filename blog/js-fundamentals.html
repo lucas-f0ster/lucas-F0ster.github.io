@@ -4,32 +4,77 @@
     <head>
       <title>Lucas Foster's EDA Blog</title>
       <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
       <link href="../styles/main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-      <div id='post-container'>
-          <h1>JavaScript Fundamentals</h1>
-          <br>
-          <p>Right! We've done some HTML, jazzed it up with a little CSS and now we've got a website.<br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+        <div id='post-container'>
+            <h1>JavaScript Fundamentals</h1>
+            <br>
+            <p>Right! We've done some HTML, jazzed it up with a little CSS and now we've got a website.<br>
             And what a website it is! It holds information, displays it and lets users navigate about. Job done, right?</p>
-          <p>Well kind of. See, our website exists and works but it's not much more than a collection of pages and items, it's not very <strong>dynamic</strong>, is it?</p>
-          <h2>So what DO we have?</h2>
-          <p>All we currently have is a bunch of HTML elements and a bit of CSS styling that could just as well be screenshots uploaded!</p>
-          <p>HTML and CSS are the same stuff though, aren't they?<br>
+            <p>Well kind of. See, our website exists and works but it's not much more than a collection of pages and items, it's not very <strong>dynamic</strong>, is it?</p>
+            <h2>So what DO we have?</h2>
+            <p>All we currently have is a bunch of HTML elements and a bit of CSS styling that could just as well be screenshots uploaded!</p>
+            <p>HTML and CSS are the same stuff though, aren't they?<br>
             No... Maybe we should have a refresher.</p>
-          <h2>What's up with that HTML and CSS stuff?</h2>
-          <p>Most websites are made of HTML and CSS files, at their most basic.<br>
-          They look very similar, and work very closely with each other but the difference is basically this:</p>
-          <p>HTML is a sort of framework, a list. It's a document containing all the differnt pieces of text, images, boxes, buttons and the likes that make up the webpage. It's no
-              more than a text document, really, a list of different <strong>elements</strong> and a rough idea of which ones are inside the others.
-          </p>
-          <p>That's why we we create some <strong>styles</strong> with our CSS document.</p>
-          <p>On its own, a CSS file is even less exciting than an HTML document, at least we HTML we get an ugly list of parts while with CSS, you wouldn't see anything at all!</p>
-          <p>CSS files exist to tell the HTML Elements how they should look, where they should sit on the page and where they should sit compared to each other</p>
-          <p><strong>In short, HTML describes WHAT is in your page and CSS describes HOW that stuff should be shown!</strong></p>
-          <h2>What about that Control Flow and Looping carry on? Sounds like setting up hosepipes to me</h2>
-          <p>Well, my sarcastic alter ego, that's a pretty</p>
+            <h2>What's up with that HTML and CSS stuff?</h2>
+            <p>Most websites are made of HTML and CSS files, at their most basic.<br>
+            They look very similar, and work very closely with each other but the difference is basically this:</p>
+            <p>HTML is a sort of framework, a list. It's a document containing all the differnt pieces of text, images, boxes, buttons and the likes that make up the webpage. It's no
+                more than a text document, really, a list of different <strong>elements</strong> and a rough idea of which ones are inside the others.
+            </p>
+            <p>That's why we we create some <strong>styles</strong> with our CSS document.</p>
+            <p>On its own, a CSS file is even less exciting than an HTML document, at least we HTML we get an ugly list of parts while with CSS, you wouldn't see anything at all!</p>
+            <p>CSS files exist to tell the HTML Elements how they should look, where they should sit on the page and where they should sit compared to each other</p>
+            <p><strong>In short, HTML describes WHAT is in your page and CSS describes HOW that stuff should be shown!</strong></p>
+            <h2>Alright then, what about that JavaScript thing?</h2>
+            <p>Well, my sarcastic alter ego, that's a good question!</p>
+            <p>If you consider that HTML describes <strong>WHAT</strong> to build and CSS describes <strong>HOW</strong> it should look, JavaScript describes what to <strong>DO</strong> with your page!</p>
+            <p>HTML is what goes on your page when it loads, same with CSS. Once that little wheel stops spinning or the bar is filled, that's it. That page will never change, grow or do anything exciting. <br>
+            Sure, you can make certain elements cange colour when you hover your cursor over them, mayba dropdown menu or two, but nothing genuinely dynamic - nothing that wasn't in your CSS or HTML to start with.
+            </p>
+            <p>That is where JAvaScript comes in. Instead of being a document your browser reads and sets up, it's a programming language that allows your browser to run real code, using the parts of your website in its programme.</p>
+            <h2>Alrighty then, HTML describes contents, CSS tells them how to look and JS makes them do stuff. How?</h2>
+            <p>Enough is never enough for you, is it?</p>
+            <p>Alright, fine. JavaScript is basically just a programming language, you set it up and runs through its Control Flow, repeats its loops, and acts just like any programme.</p>
+            <h2>Control Flow? Loops?</h2>
+            <p>Yes! Those!<br>
+            Don't worry, they're not as scary as you think. The Control Flow is just the order that code is executed (top to bottom).</p>
+            <p>If running your code just once, from start to finish, isn't enough for you - maybe you need to count, do something multiple times or check back on previous runs - the you can use loops.</p>
+            <p>Consider making a cup of tea. You might grab a mug object, throw in a teabag, fill the mug with water and once all those are done, stir that mug 12 times and remove the teabag.</p>
+            <p>That's a few steps that have to be performed in order, plus a few repated stirs of the spoon.</p>
+            <p>But instead of making our own cup of tea (boring), let's write some snazzy JavaScript that will make it for us! It'd look something like this:</p>          
+            <div class="code-container">
+            <pre style="background: none; margin-left: -0px; margin-right: 0%; overflow: hidden;">
+                <code class="language-javascript">
+var mug = {hasBag:false, hasWater:false};
+
+makeTea() {
+    mug.hasBag = true;
+    mug.hasWater = true;
+    for(i=0; i &lt; 12; i++) {
+        stirSpoon();
+    };
+    mug.hasBag = false;
+};
+                </code>
+            </pre>
+            </div>
+            <p>Okay, let's walk through what all that means.</p>
+            <p>That first line creates a new mug with a couple properties. It's a smart mug, so it knows if it has a tea bag and some water in it, but it starts empty.</p>
+            <p>That next chunk is a set of instructions, called a <strong>function</strong>. Functions are handy because they're a set of instructions that all happen together, which we can trigger in lots of ways. We could just request some tea by typing in a command, or it could happen at a set time, or when a microphone hears us ask. The sky is the limit!<br>
+            Inside our function is where the instructions are, so what do they do?</p>
+            <p>Well first, we tell the mug that it now has a teabag, then we tell it it has some water, remember the mug knows if it does or doesn't have those things, we're just changing that.</p>
+            <p>Now is where we play around, up until now we were letting the <strong>flow</strong> do its thing, one instruction after another down the page.<br>
+            Now, we're creating a <strong>loop</strong>, we're creating a repeating piece of code that does whatever it contains until it's counted to the limit (in this case, 12).</p>
+            <p>That means our makeTea function will call a stirSpoon function 12 times, so we know it's properly stirred. After it's finished with the loop, our code goes back to its normal flow and works down the list.<br>
+            It goes to the next command, where it removes the teabag. We've left this outside our <strong>loop</strong> because we don't want it trying to remove the bag 12 times, once every stir, because that'd be weird<br>
+            The final curly brackets at the bottomm end our function and lets our code finish up.</p>
+            <p>So what did we do? We made some code, which will work through step by step in its normal <strong>flow</strong>, doing each task once, until we need it to repeat something a few times so we break that <strong>flow</strong> with a <strong>loop!</strong></p>
       </div>
     </body>
   </html>
