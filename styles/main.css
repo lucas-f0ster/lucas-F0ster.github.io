@@ -21,8 +21,9 @@ body {
 
 #title {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
+    justify-content: center;
 
 }
 
@@ -50,7 +51,7 @@ body {
 #title img {
     width: auto;
     max-height: 35px;
-    margin: 10px;
+    margin: 10px 30px;
     flex: 1 1 auto;
 }
 
@@ -65,11 +66,12 @@ body {
 }
 
 .navbar button {
-    height: 2.3em;
+    height: auto;
     font-family: "Zen Dots";
     font-size: 18px;
     margin: 0.5em;
     background: #ddd;
+    padding: 0.65em;
 }
 
 .content {
