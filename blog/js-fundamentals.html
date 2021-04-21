@@ -1,56 +1,96 @@
   
-  <!DOCTYPE html>
-  <html class="post-html">
-    <head>
-      <title>Lucas Foster's EDA Blog</title>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
-      <link href="../styles/main.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
-        <div id='post-container'>
-            <h1>JavaScript Fundamentals</h1>
-            <br>
-            <p>Right! We've done some HTML, jazzed it up with a little CSS and now we've got a website.<br>
-            And what a website it is! It holds information, displays it and lets users navigate about. Job done, right?</p>
-            <p>Well kind of. See, our website exists and works but it's not much more than a collection of pages and items, it's not very <strong>dynamic</strong>, is it?</p>
-            <h2>So what DO we have?</h2>
-            <p>All we currently have is a bunch of HTML elements and a bit of CSS styling that could just as well be screenshots uploaded!</p>
-            <p>HTML and CSS are the same stuff though, aren't they?<br>
-            No... Maybe we should have a refresher.</p>
-            <h2>What's up with that HTML and CSS stuff?</h2>
-            <p>Most websites are made of HTML and CSS files, at their most basic.<br>
-            They look very similar, and work very closely with each other but the difference is basically this:</p>
-            <p>HTML is a sort of framework, a list. It's a document containing all the differnt pieces of text, images, boxes, buttons and the likes that make up the webpage. It's no
-                more than a text document, really, a list of different <strong>elements</strong> and a rough idea of which ones are inside the others.
-            </p>
-            <p>That's why we we create some <strong>styles</strong> with our CSS document.</p>
-            <p>On its own, a CSS file is even less exciting than an HTML document, at least we HTML we get an ugly list of parts while with CSS, you wouldn't see anything at all!</p>
-            <p>CSS files exist to tell the HTML Elements how they should look, where they should sit on the page and where they should sit compared to each other</p>
-            <p><strong>In short, HTML describes WHAT is in your page and CSS describes HOW that stuff should be shown!</strong></p>
-            <h2>Alright then, what about that JavaScript thing?</h2>
-            <p>Well, my sarcastic alter ego, that's a good question!</p>
-            <p>If you consider that HTML describes <strong>WHAT</strong> to build and CSS describes <strong>HOW</strong> it should look, JavaScript describes what to <strong>DO</strong> with your page!</p>
-            <p>HTML is what goes on your page when it loads, same with CSS. Once that little wheel stops spinning or the bar is filled, that's it. That page will never change, grow or do anything exciting. <br>
-            Sure, you can make certain elements cange colour when you hover your cursor over them, mayba dropdown menu or two, but nothing genuinely dynamic - nothing that wasn't in your CSS or HTML to start with.
-            </p>
-            <p>That is where JAvaScript comes in. Instead of being a document your browser reads and sets up, it's a programming language that allows your browser to run real code, using the parts of your website in its programme.</p>
-            <h2>Alrighty then, HTML describes contents, CSS tells them how to look and JS makes them do stuff. How?</h2>
-            <p>Enough is never enough for you, is it?</p>
-            <p>Alright, fine. JavaScript is basically just a programming language, you set it up and runs through its Control Flow, repeats its loops, and acts just like any programme.</p>
-            <h2>Control Flow? Loops?</h2>
-            <p>Yes! Those!<br>
-            Don't worry, they're not as scary as you think. The Control Flow is just the order that code is executed (top to bottom).</p>
-            <p>If running your code just once, from start to finish, isn't enough for you - maybe you need to count, do something multiple times or check back on previous runs - the you can use loops.</p>
-            <p>Consider making a cup of tea. You might grab a mug object, throw in a teabag, fill the mug with water and once all those are done, stir that mug 12 times and remove the teabag.</p>
-            <p>That's a few steps that have to be performed in order, plus a few repated stirs of the spoon.</p>
-            <p>But instead of making our own cup of tea (boring), let's write some snazzy JavaScript that will make it for us! It'd look something like this:</p>          
-            <div class="code-container">
-            <pre style="background: none; margin-left: -0px; margin-right: 0%; overflow: hidden;">
-                <code class="language-javascript">
+<!DOCTYPE html>
+<html class="post-html">
+<head>
+  <title>Lucas Foster's EDA Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <div id='post-container'>
+    <h1>JavaScript Fundamentals</h1>
+    <br>
+    <p>
+      Right! We've done some HTML, jazzed it up with a little CSS and now we've got a website.
+      <br>And what a website it is! It holds information, displays it and lets users navigate about. Job done, right?
+    </p>
+    <p>
+      Well kind of. See, our website exists and works but it's not much more than a collection of pages and items, it's not very <strong>dynamic</strong>, is it?
+    </p>
+    <h2>So what DO we have?</h2>
+    <p>
+      All we currently have is a bunch of HTML elements and a bit of CSS styling that could just as well be screenshots uploaded!
+    </p>
+    <p>
+      HTML and CSS are the same stuff though, aren't they?
+      <br>No... Maybe we should have a refresher.
+    </p>
+    <h2>What's up with that HTML and CSS stuff?</h2>
+    <p>
+      Most websites are made of HTML and CSS files, at their most basic.
+      <br>They look very similar, and work very closely with each other but the difference is basically this:
+    </p>
+    <p>
+      HTML is a sort of framework, a list. It's a document containing all the differnt pieces of text, images, boxes, buttons and the likes that make up the webpage. It's no
+      more than a text document, really, a list of different <strong>elements</strong> and a rough idea of which ones are inside the others.
+    </p>
+    <p>
+      That's why we we create some <strong>styles</strong> with our CSS document.
+    </p>
+    <p>
+      On its own, a CSS file is even less exciting than an HTML document, at least we HTML we get an ugly list of parts while with CSS, you wouldn't see anything at all!
+    </p>
+    <p>
+      CSS files exist to tell the HTML Elements how they should look, where they should sit on the page and where they should sit compared to each other
+    </p>
+    <p>
+      <strong>In short, HTML describes WHAT is in your page and CSS describes HOW that stuff should be shown!</strong>
+    </p>
+    <h2>Alright then, what about that JavaScript thing?</h2>
+    <p>
+      Well, my sarcastic alter ego, that's a good question!
+    </p>
+    <p>
+      If you consider that HTML describes <strong>WHAT</strong> to build and CSS describes <strong>HOW</strong> it should look, JavaScript describes what to <strong>DO</strong> with your page!
+    </p>
+    <p>
+      HTML is what goes on your page when it loads, same with CSS. Once that little wheel stops spinning or the bar is filled, that's it. That page will never change, grow or do anything exciting. 
+      <br>Sure, you can make certain elements cange colour when you hover your cursor over them, mayba dropdown menu or two, but nothing genuinely dynamic - nothing that wasn't in your CSS or HTML to start with.
+    </p>
+    <p>
+      That is where JavaScript comes in. Instead of being a document your browser reads and sets up, it's a programming language that allows your browser to run real code, using the parts of your website in its programme.
+    </p>
+    <h2>Alrighty then, HTML describes contents, CSS tells them how to look and JS makes them do stuff. How?</h2>
+    <p>
+      Enough is never enough for you, is it?
+    </p>
+    <p>
+      Alright, fine. JavaScript is basically just a programming language, you set it up and runs through its Control Flow, repeats its loops, and acts just like any programme.
+    </p>
+    <h2>Control Flow? Loops?</h2>
+    <p>
+      Yes! Those!
+      <br>Don't worry, they're not as scary as you think. The Control Flow is just the order that code is executed (top to bottom).
+    </p>
+    <p>
+      If running your code just once, from start to finish, isn't enough for you - maybe you need to count, do something multiple times or check back on previous runs - the you can use loops.
+    </p>
+    <p>
+      Consider making a cup of tea. You might grab a mug object, throw in a teabag, fill the mug with water and once all those are done, stir that mug 12 times and remove the teabag.
+    </p>
+    <p>
+      That's a few steps that have to be performed in order, plus a few repated stirs of the spoon.
+    </p>
+    <p>
+      But instead of making our own cup of tea (boring), let's write some snazzy JavaScript that will make it for us! It'd look something like this:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin-left: -0px; margin-right: 0%; overflow: hidden;">
+        <code class="language-javascript">
 var mug = {hasBag:false, hasWater:false};
 
 makeTea() {
@@ -61,33 +101,60 @@ makeTea() {
     };
     mug.hasBag = false;
 };
-                </code>
-            </pre>
-            </div>
-            <p>Okay, let's walk through what all that means.</p>
-            <p>That first line creates a new mug with a couple properties. It's a smart mug, so it knows if it has a tea bag and some water in it, but it starts empty.</p>
-            <p>That next chunk is a set of instructions, called a <strong>function</strong>. Functions are handy because they're a set of instructions that all happen together, which we can trigger in lots of ways. We could just request some tea by typing in a command, or it could happen at a set time, or when a microphone hears us ask. The sky is the limit!<br>
-            Inside our function is where the instructions are, so what do they do?</p>
-            <p>Well first, we tell the mug that it now has a teabag, then we tell it it has some water, remember the mug knows if it does or doesn't have those things, we're just changing that.</p>
-            <p>Now is where we play around, up until now we were letting the <strong>flow</strong> do its thing, one instruction after another down the page.<br>
-            Now, we're creating a <strong>loop</strong>, we're creating a repeating piece of code that does whatever it contains until it's counted to the limit (in this case, 12).</p>
-            <p>That means our makeTea function will call a stirSpoon function 12 times, so we know it's properly stirred. After it's finished with the loop, our code goes back to its normal flow and works down the list.<br>
-            It goes to the next command, where it removes the teabag. We've left this outside our <strong>loop</strong> because we don't want it trying to remove the bag 12 times, once every stir, because that'd be weird<br>
-            The final curly brackets at the bottomm end our function and lets our code finish up.</p>
-            <p>So what did we do? We made some code, which will work through step by step in its normal <strong>flow</strong>, doing each task once, until we need it to repeat something a few times so we break that <strong>flow</strong> with a <strong>loop!</strong></p>
-            <h2>Got it! But what was that about Functions?</h2>
-            <p>A function, dear friend, is basically a command that you can call on in other parts of your code.</p>
-            <p>That code up top was for a makeTea() function, which means we can have other pieces of code that can ask makeTea() to run, then carry on with what it was doing!</p>
-            <p>So what goes into a function?</p>
-            <p>Well, first we have the name, in this case that's "makeTea". Then we have a pair of brackets.<br>
-            Inside those brackets we can make our function expect certain pieces of information, called <strong>arguments</strong>. With 
-            With arguments, we can pass information over to our function that it can use when it does its thing.</p>
-            <p>Let's do an example. Imagine we want to make that cup of tea, but we want to be able to tell our <strong>function</strong> how many times it should stir the spoon.</p>
-            <p>We'll have to rewrite our function so that it can receive an <strong>argument</strong> and use that to decide how much to stir.</p>          
-            <p>That would look like this:</p>
-            <div class="code-container">
-            <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      Okay, let's walk through what all that means.
+    </p>
+    <p>
+      That first line creates a new mug with a couple properties. It's a smart mug, so it knows if it has a tea bag and some water in it, but it starts empty.
+    </p>
+    <p>
+      That next chunk is a set of instructions, called a <strong>function</strong>. Functions are handy because they're a set of instructions that all happen together, which we can trigger in lots of ways. We could just request some tea by typing in a command, or it could happen at a set time, or when a microphone hears us ask. The sky is the limit!
+      <br>Inside our function is where the instructions are, so what do they do?
+    </p>
+    <p>
+      Well first, we tell the mug that it now has a teabag, then we tell it it has some water, remember the mug knows if it does or doesn't have those things, we're just changing that.
+    </p>
+    <p>
+      Now is where we play around, up until now we were letting the <strong>flow</strong> do its thing, one instruction after another down the page.
+      <br>Now, we're creating a <strong>loop</strong>, we're creating a repeating piece of code that does whatever it contains until it's counted to the limit (in this case, 12).
+    </p>
+    <p>
+      That means our makeTea function will call a stirSpoon function 12 times, so we know it's properly stirred. After it's finished with the loop, our code goes back to its normal flow and works down the list.
+      <br>It goes to the next command, where it removes the teabag. We've left this outside our <strong>loop</strong> because we don't want it trying to remove the bag 12 times, once every stir, because that'd be weird
+      <br>The final curly brackets at the bottomm end our function and lets our code finish up.
+    </p>
+    <p>
+      So what did we do? We made some code, which will work through step by step in its normal <strong>flow</strong>, doing each task once, until we need it to repeat something a few times so we break that <strong>flow</strong> with a <strong>loop!</strong>
+    </p>
+    <h2>Got it! But what was that about Functions?</h2>
+    <p>
+      A function, dear friend, is basically a command that you can call on in other parts of your code.
+    </p>
+    <p>
+      That code up top was for a makeTea() function, which means we can have other pieces of code that can ask makeTea() to run, then carry on with what it was doing!
+    </p>
+    <p>
+      So what goes into a function?
+    </p>
+    <p>
+      Well, first we have the name, in this case that's "makeTea". Then we have a pair of brackets.
+      <br>Inside those brackets we can make our function expect certain pieces of information, called <strong>arguments</strong>. With arguments, we can pass information over to our function that it can use when it does its thing.
+    </p>
+    <p>
+      Let's do an example. Imagine we want to make that cup of tea, but we want to be able to tell our <strong>function</strong> how many times it should stir the spoon.
+    </p>
+    <p>
+      We'll have to rewrite our function so that it can receive an <strong>argument</strong> and use that to decide how much to stir.
+    </p>
+    <p>
+      That would look like this:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+        <code class="language-javascript">
 makeTea(stirs) {
     mug.hasBag = true;
     mug.hasWater = true;
@@ -96,75 +163,119 @@ makeTea(stirs) {
     };
     mug.hasBag = false;
 };
-                </code>
-            </pre>
-            </div>
-            <p>See the difference? We've put "stirs" as an <strong>argument</strong> of MakeTea(). So instead of just calling makeTea() and it giving us the same cup every time, we now call the function and give it a number as its <strong>argument</strong>.
-            So now we can call makeTea(12) and our tea maker will read our number of stirs, and use that as the number it'll count to! And yes, we did just ask it to stir the same number of times as it already did...</p>
-            <p>This might seem like a minor change, but the less we explicitly code in numbers, amounts, words and so on, the better. This means our code can change, work as needed and if we found we like our tea with more stirs, we don't have to go through and change the number every time.</p>
-            <h2>Okay, so a function is just a task we can request using its name, without writing the instructions every time?</h2>
-            <p>Exactly! Repeating yourself in your code is messy and confusing, better to have lots of small functions than a few big ones</p>
-            <h2>But I have friends, what if I want to make more than one cup of tea and make them all different?</h2>
-            <p>...Okay. I feel like you're asking these questions just to help a blog post flow.</p>
-            <p>But fine! Let's say we have five friends, each of whom like their tea stirred a different number of times.</p>
-            <p>We could just call our makeTea() function five times and give it a different stir argument every time, that would look like this:</p>
-            <div class="code-container">
-            <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      See the difference? We've put "stirs" as an <strong>argument</strong> of MakeTea(). So instead of just calling makeTea() and it giving us the same cup every time, we now call the function and give it a number as its <strong>argument</strong>.
+      So now we can call makeTea(12) and our tea maker will read our number of stirs, and use that as the number it'll count to! And yes, we did just ask it to stir the same number of times as it already did...
+    </p>
+    <p>
+      This might seem like a minor change, but the less we explicitly code in numbers, amounts, words and so on, the better. This means our code can change, work as needed and if we found we like our tea with more stirs, we don't have to go through and change the number every time.
+    </p>
+    <h2>Okay, so a function is just a task we can request using its name, without writing the instructions every time?</h2>
+    <p>
+      Exactly! Repeating yourself in your code is messy and confusing, better to have lots of small functions than a few big ones
+    </p>
+    <h2>But I have friends, what if I want to make more than one cup of tea and make them all different?</h2>
+    <p>
+      ...Okay. I feel like you're asking these questions just to help a blog post flow.
+    </p>
+    <p>
+      But fine! Let's say we have five friends, each of whom like their tea stirred a different number of times.
+    </p>
+    <p>
+      We could just call our makeTea() function five times and give it a different stir argument every time, that would look like this:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+        <code class="language-javascript">
 makeTea(5);
 makeTea(7);
 makeTea(9);
 makeTea(3);
 makeTea(15);
-                </code>
-            </pre>
-            </div>
-            <p>There you go, we've asked our tea maker to do its thing 5 times over and given it different numbers each time</p>
-            <p>But that's pretty messy, and we're repeating ourselves so we should probably ask our tea maker to read the orders from a list.<br>
-            There are a few ways we can try, but how about we use an <strong>array</strong>.</p>
-            <h2>An array as in a list?</h2>
-            <p>Kind of. Think of them more as a spreadsheet that we can hold information in.</p>
-            <p>Let's make an array of all those different tea orders, it would look like this:</p>
-            <div class="code-container">
-            <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      There you go, we've asked our tea maker to do its thing 5 times over and given it different numbers each time
+    </p>
+    <p>
+      But that's pretty messy, and we're repeating ourselves so we should probably ask our tea maker to read the orders from a list.
+      <br>There are a few ways we can try, but how about we use an <strong>array</strong>.
+    </p>
+    <h2>An array as in a list?</h2>
+    <p>
+      Kind of. Think of them more as a spreadsheet that we can hold information in.
+    </p>
+    <p>
+      Let's make an array of all those different tea orders, it would look like this:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+        <code class="language-javascript">
 var stirOrders = [5, 7, 9, 3, 15];
-                </code>
-            </pre>
-            </div>
-            <p>There we are! We've declared stirOrders and by using those square brackets, we've made it into an <strong>array</strong>. For simplicity, we've thrown our list of orders straight into the array.</p>
-            <p>Now we have to read our order list. Again, there are a few ways to do it but we'll make a quick <strong>loop</strong> that'll make a cup of tea for every order in the list</p>
-            <p>Here goes:</p>
-            <div class="code-container">
-                <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                    <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      There we are! We've declared stirOrders and by using those square brackets, we've made it into an <strong>array</strong>. For simplicity, we've thrown our list of orders straight into the array.
+    </p>
+    <p>
+      Now we have to read our order list. Again, there are a few ways to do it but we'll make a quick <strong>loop</strong> that'll make a cup of tea for every order in the list
+    </p>
+    <p>
+      Here goes:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+        <code class="language-javascript">
 for(i=0; i &lt; stirOrders.length; i++) {
     makeTea(stirOrders[i]);
 };
-                    </code>
-                </pre>
-                </div>
-            <p>Simple as that!</p>
-            <p>Our new <strong>loop</strong> uses the length of our order list as its maximum, so it will make orders one by one until it's worked through our <strong>array</strong>.</p>
-            <p>It's important to remember that JavaScript arrays are <strong>0 indexed</strong>, the first entry is number 0 and so on, which is why we start our count at 0 and end it 1 before the full length.</p>
-            <p>Now that we're counting an array, we need to access the information inside it.<br>
-            Since our counting variable "I" is the same number as our position in our array, we can use that to tell our tea maker which stir request it'll ust</p>
-            <p>To read data from an array we use arrayName[theEntryWeWant], and we've put that code as the argument of each makeTea call!</p>
-            <h2>Okay, an array is a list and we can access information inside it. Didn't you mention objects?</h2>
-            <p>I did! How about instead of a list of orders, we make each person an object and give them a stir preference?</p>
-            <p>First, we'll make a person who only has two traits, their name and how they like their tea:</p>
-            <div class="code-container">
-                <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                    <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      Simple as that!
+    </p>
+    <p>
+      Our new <strong>loop</strong> uses the length of our order list as its maximum, so it will make orders one by one until it's worked through our <strong>array</strong>.
+    </p>
+    <p>
+      It's important to remember that JavaScript arrays are <strong>0 indexed</strong>, the first entry is number 0 and so on, which is why we start our count at 0 and end it 1 before the full length.
+    </p>
+    <p>
+      Now that we're counting an array, we need to access the information inside it.
+      <br>Since our counting variable "I" is the same number as our position in our array, we can use that to tell our tea maker which stir request it'll use.
+    </p>
+    <p>
+      To read data from an array we use arrayName[theEntryWeWant], and we've put that code as the argument of each makeTea call!
+    </p>
+    <h2>Okay, an array is a list and we can access information inside it. Didn't you mention objects?</h2>
+    <p>
+      I did! How about instead of a list of orders, we make each person an object and give them a stir preference?
+    </p>
+    <p>
+      First, we'll make a person who only has two traits, their name and how they like their tea:
+    </p>
+    <div class="code-container">
+      <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+        <code class="language-javascript">
 var person = {name:"", stir: 0};
-                    </code>
-                </pre>
-                </div>
-            <p>There we go, we've made a "person" object and decided they'll have a string for their name and a number for their preferred stirs.</p>
-            <p>Like before, let's make an array containing our five friends:</p>
-            <div class="code-container">
-                <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                    <code class="language-javascript">
+        </code>
+      </pre>
+    </div>
+    <p>
+      There we go, we've made a "person" object and decided they'll have a string for their name and a number for their preferred stirs.
+    </p>
+    <p>
+      Like before, let's make an array containing our five friends:
+    </p>
+      <div class="code-container">
+        <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+          <code class="language-javascript">
 let people = [
     {
         "name": "Geoff",
@@ -187,38 +298,57 @@ let people = [
         "stirs": 15,
     },
 ];
-                    </code>
-                </pre>
-                </div>
-            <p>There you go, we've made an array of people containing our five friends.</p>
-            <p>Now we can loop through each person, just like the previous array, and access their stirs properties.</p>
-            <div class="code-container">
-                <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                    <code class="language-javascript">
+          </code>
+        </pre>
+      </div>
+      <p>
+        There you go, we've made an array of people containing our five friends.
+      </p>
+      <p>
+        Now we can loop through each person, just like the previous array, and access their stirs properties.
+      </p>
+      <div class="code-container">
+        <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+          <code class="language-javascript">
 for(i=0; i &lt; people.length; i++) {
     makeTea(people[i].stirs);
 };
-                    </code>
-                </pre>
-                </div>
-            <p>Just like last time, we're cycling through our array of 5 items, but this time those items are people instead of numbers.<br>
-            For each person, we access their stirs property by using either object.property or object[property] (we've used dots so it's easier to read).</p>
-            <h2>Seems like a lot of work, what's the difference between using data from arrays and objects?</h2>
-            <p>An array would work just fine if we only wanted a list of tea orders, but we're only making a list of orders, we're not making tea for a list of people</p>
-            <p>Objects, on the other hand, can have loads of properties! What if each person could decide the temperatur, type of tea, decide if they want a keep cup and decide their cup colour?
-            Our array suddenly gets very big and very complicated, and we can still only ask for a person's order by knowing their place in our list</p>
-            <p>An object means we can just make tea for a certain person by using their name, make it just how they like it and do it whenever we like!</p>
-            <h2>Right... Flows, loops, functions, arrays and objects. How is this relevant to a website?</h2>
-            <p>And that's the important part!</p>
-            <p>Our JavaScript can interact directly with out HTML and CSS code by looking at the <strong>DOM</strong>.</p>
-            <h2>The Dom? Like a mafia boss?</h2>
-            <p>No, not a Don, the DOM. The DOM (or Document Object Model) is a representation of all the objects that make up a webpage.<br>
-            All those Divs, Imgs, paragraphs and headings? They're all viewed as objects by the DOM, and the DOM is how our code sees our page.<br>
-            Because of our DOM, our JavaScript can access elements on our page without having to read the HTML code and figure it all out.</p>
-            <p>Let's do an example, let's say we want to run a JavaScript function when our page loads. In fact, let's create a link that'll ask for a cup of tea when we click it!</p>
-            <div class="code-container">
-                <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
-                    <code class="language-javascript">
+          </code>
+        </pre>
+      </div>
+      <p>
+        Just like last time, we're cycling through our array of 5 items, but this time those items are people instead of numbers.
+        <br>For each person, we access their stirs property by using either object.property or object[property] (we've used dots so it's easier to read).
+      </p>
+      <h2>Seems like a lot of work, what's the difference between using data from arrays and objects?</h2>
+      <p>
+        An array would work just fine if we only wanted a list of tea orders, but we're only making a list of orders, we're not making tea for a list of people</p>
+      <p>
+        Objects, on the other hand, can have loads of properties! What if each person could decide the temperatur, type of tea, decide if they want a keep cup and decide their cup colour?
+        Our array suddenly gets very big and very complicated, and we can still only ask for a person's order by knowing their place in our list
+      </p>
+      <p>
+        An object means we can just make tea for a certain person by using their name, make it just how they like it and do it whenever we like!
+      </p>
+      <h2>Right... Flows, loops, functions, arrays and objects. How is this relevant to a website?</h2>
+      <p>
+        And that's the important part!
+      </p>
+      <p>
+        Our JavaScript can interact directly with out HTML and CSS code by looking at the <strong>DOM</strong>.
+      </p>
+      <h2>The Dom? Like a mafia boss?</h2>
+      <p>
+        No, not a Don, the DOM. The DOM (or Document Object Model) is a representation of all the objects that make up a webpage.
+        <br>All those Divs, Imgs, paragraphs and headings? They're all viewed as objects by the DOM, and the DOM is how our code sees our page.
+        <br>Because of our DOM, our JavaScript can access elements on our page without having to read the HTML code and figure it all out.
+      </p>
+      <p>
+        Let's do an example, let's say we want to run a JavaScript function when our page loads. In fact, let's create a link that'll ask for a cup of tea when we click it!
+      </p>
+      <div class="code-container">
+        <pre style="background: none; margin: -10px 0px -40px -0px; overflow: hidden;">
+          <code class="language-javascript">
 window.onload = makeTea() {
     mug.hasBag = true;
     mug.hasWater = true;
@@ -227,17 +357,25 @@ window.onload = makeTea() {
     };
     mug.hasBag = false;
 };
-                    </code>
-                </pre>
-            </div>
-            <p>There! We've made some JavaScript that'll access our DOM and once the whole DOM has loaded, it'll run our makeTea() function and brew us a lovely cup.</p>
-            <p>Our scripts can also access individual page elements, seeing each one as an object, make changes to them, make our content dynamic and so much more.</p>
-            <p>in short, the DOM is the model we use to describe our HTML and CSS in a way that can be viewed, accessed and changed by our code.<br>
-            Anything we can do in JavaScript, we can do to our websites by access the DOM!</p>
-            <br>
-            <h2>Well... That was quite a read, can I go now?</h2>
-            <p>It certainly was! But now we're done, how about a cup of tea?</p>
+          </code>
+        </pre>
       </div>
-    </body>
-  </html>
+      <p>
+        There! We've made some JavaScript that'll access our DOM and once the whole DOM has loaded, it'll run our makeTea() function and brew us a lovely cup.
+      </p>
+      <p>
+        Our scripts can also access individual page elements, seeing each one as an object, make changes to them, make our content dynamic and so much more.
+      </p>
+      <p>
+        In short, the DOM is the model we use to describe our HTML and CSS in a way that can be viewed, accessed and changed by our code.
+        <br>Anything we can do in JavaScript, we can do to our websites by access the DOM!
+      </p>
+      <br>
+      <h2>Well... That was quite a read, can I go now?</h2>
+      <p>
+        It certainly was! But now we're done, how about a cup of tea?
+      </p>
+  </div>
+</body>
+</html>
   
