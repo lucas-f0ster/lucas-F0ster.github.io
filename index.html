@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
       <link href="styles/main.css" rel="stylesheet" type="text/css">
+      <script src="scripts/scripts.js"></script>
     </head>
     <body>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
@@ -26,24 +27,32 @@
           <a href="blog/post1.html" target="display"><button>Post 3</button></a>-->
         </div>
         <div class="navbar">
-          <form action="blog/template.html" target="display">
-            <button>Home</button>
-          </form>
-          <form action="blog/html-css.html" target="display">
-            <button>Classes vs IDs</button>
-          </form>
-          <form action="blog/identity-values.html" target="display">
-            <button>Identity & Values</button>
-          </form>
-          <form action="blog/learning-plan.html" target="display">
-            <button>Learning Plan</button>
-          </form>
-          <form action="blog/emotional-intelligence.html" target="display">
-            <button>Emotional Intelligence</button>
-          </form>
-          <form action="blog/js-fundamentals.html" target="display">
-            <button>JS Fundamentals</button>
-          </form>
+          <div class='dropdown'>
+            <button onclick="openList()" class="dropbtn">Check my posts!</button>
+            <div id="drop-menu" class='drop-content'>
+              <form action="blog/template.html" target="display">
+                <button>Home</button>
+              </form>
+              <form action="blog/html-css.html" target="display">
+                <button>Classes vs IDs</button>
+              </form>
+              <form action="blog/identity-values.html" target="display">
+                <button>Identity & Values</button>
+              </form>
+              <form action="blog/learning-plan.html" target="display">
+                <button>Learning Plan</button>
+              </form>
+              <form action="blog/emotional-intelligence.html" target="display">
+                <button>Emotional Intelligence</button>
+              </form>
+              <form action="blog/js-fundamentals.html" target="display">
+                <button>JS Fundamentals</button>
+              </form>
+              <form action="blog/neuroplasticity.html" target="display">
+                <button>Neuroplasticity</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <div class="content">
