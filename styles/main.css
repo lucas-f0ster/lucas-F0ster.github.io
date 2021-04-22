@@ -66,6 +66,25 @@ body {
     flex-shrink: 0;
 }
 
+.dropdown {
+  position:relative;
+  padding: 3px;
+  margin: -7px;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.show {
+  display: block;
+}
+
 .navbar button {
     height: auto;
     font-family: "Zen Dots";
@@ -75,6 +94,17 @@ body {
     padding: 0.65em;
     max-width: 100%;
     flex-shrink: 1;
+}
+
+.drop-content button {
+  height: auto;
+  font-family: "Zen Dots";
+  font-size: 18px;
+  margin: 0.5em;
+  background: #ddd;
+  padding: 0.65em;
+  max-width: 100%;
+  flex-shrink: 1;
 }
 
 .content {
