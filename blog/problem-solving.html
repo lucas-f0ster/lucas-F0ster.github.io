@@ -1,0 +1,76 @@
+  
+<!DOCTYPE html>
+<html class="post-html">
+<head>
+  <title>Lucas Foster's EDA Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zen+Dots|Roboto|Roboto+Slab">
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+  <div id='post-container'>
+    <h1>Let&rsquo;s talk about solving Problems&trade;</h1>
+    <p>
+      First, we&rsquo;ll have a little story time about problems I&rsquo;ve come up against and the techniques used to get past them.
+    </p>
+    <h2>Story time? Please tell me this won&rsquo;t involve tea again&hellip;</h2>
+    <p>
+      No, nothing like that!
+    </p>
+    <p>
+      <strong>First up, a super simple problem that had me tearing my hair out:</strong>
+    </p>
+    <p>
+      Picture this, I&rsquo;ve just spent half an hour writing code, I&rsquo;m trying to make a JavaScript function that&rsquo;ll run a dropdown menu. After getting it all written and what appears to be correct, I just cannot get the thing to work. It&rsquo;s late, I&rsquo;m tired and this is getting painful.
+    </p>
+    <p>
+      Want to know what the problem was?&nbsp;
+    </p>
+    <p>
+      I&rsquo;d spelled a single word wrong! Instead of &lsquo;drop-content&rsquo; I&rsquo;d written &lsquo;dorp-content&rsquo;, and I couldn&rsquo;t spot the typo for the life of me. I definitely felt like a dorp an hour later after I&rsquo;d gone away, chilled out for a bit, came back fresh and finally noticed my problem.
+    </p>
+    <p>
+      It wasn&rsquo;t a big problem, it wasn&rsquo;t the end of the world, but I was looking for some clever trick in my code to convince it to work and I neglected to look at the most simple solution!
+    </p>
+    <p>
+      <strong>Let&rsquo;s look at a more elegant solution</strong>
+    </p>
+    <p>
+      Invisible typos aside, I ran into an interesting solution while working through the JavaScript Kata, specifically the Gradebook exercise.
+    </p>
+    <p>
+      The instructions asked for each student to be declared an object and for each to have their scores as a property. Writing them out one by one in a long list felt like a lot of code to accomplish something simple, so I wrote a simple loop to create them all at once!
+    </p>
+    <p>
+      A more elegant solution, sure, but it did cause some confusion when I reached the stretch task that asked me to do exactly that! After a few minutes of being puzzled at why it was asking for the same thing twice, I realised I could simply copy and paste my loop into this new function and get it done.
+    </p>
+    <p>
+      Not only had I solved the first task more simply than intended, but I&rsquo;d solved the stretch task at the same time! Feels pretty elegant to me&hellip;
+    </p>
+    <h2>So what techniques can I use to solve problems?</h2>
+    <p>
+      Loads! Want a list? I&rsquo;m giving you a list:
+    </p>
+    <ul>
+      <li><strong><strong>Pseudocode - </strong>The simplest, and my favourite! It&rsquo;s a fancy sounding name, but all you&rsquo;re really doing is writing out your <em>intentions</em> in comments, rather than diving into the code straight away. So you might write a list of comments describing what you know you need each function to do, what it requires and what it should return, then going through and figuring out <em>how</em> it will do it with your real code.As functions get longer and more complicated, holding their whole structure in your head gets hard, so writing it out first and filling in the blanks is the way to go.</strong></li>
+      <li><strong><strong>Give it a try - </strong>Does what it says on the tin! A little like the opposite to pseudocode, if you have a rough idea of what you need to do and how it could work, just start bashing the code in there! Keep running it and checking the console for errors and trial and error your way to the finish line.Don&rsquo;t worry about keeping your code neat and tidy, just focus on making it work. Once it does what it needs to do, you can go back, refactor and get it looking how it should.</strong></li>
+      <li><strong><strong>The rubber ducky! - </strong>Fun name, but a seriously clever practice. Imagine there&rsquo;s a rubber ducky on your desk (or get a real one!). He knows nothing about coding, and you&rsquo;ve got to explain exactly what your code does, line by line, in as much detail as possible.Sometimes, when your code isn&rsquo;t working how you want, forcing yourself to slow down and really understand every line you&rsquo;ve written is what helps you spot those bugs</strong></li>
+      <li><strong><strong>Read your error messages! - </strong>Another one I rely on heavily. You&rsquo;ve written some code, you&rsquo;ve run it and it got halfway and ended up stuck, or it displayed something super weird you didn&rsquo;t intend, or nothing showed up. Sure you could go through line by line and explain it all to our lovely duck, OR you could check your console and see what it&rsquo;s telling you. That error at line 38 saying it didn&rsquo;t expect a right bracket? It&rsquo;s probably telling you that right bracket isn&rsquo;t meant to be there</strong></li>
+      <li><strong><strong>Console.logging - </strong>Does your code rely on a return from a function, or an object working properly? If you&rsquo;re returning something or using objects, it probably does!To check if they&rsquo;re using the right information, sometimes it&rsquo;s best to add a cheeky console.log to your code so you can display that full object or that returned information in your console (this is exactly how I found out my students in the gradebook exercise all had &lsquo;undefined&rsquo; as their names). Try it, it works!</strong></li>
+      <li><strong><strong>Give it a Google! - </strong>Ah, a classic. What a wonderful thing Google can be, provided you ask it the right questions.The two best sources I&rsquo;ve found Google can point you to are documentation for the language you&rsquo;re using (which you should probably keep open anyway) so you can remind yourself of the inputs, outputs and syntax of built in methods and coding forums. Forums are wonderful because 90% of the time, someone else has asked the same question you are and have been given the answer.Make sure you never copy and paste some code from the internet though! Read it, make sure you understand it, use what they&rsquo;ve provided to inform your own code - copy and paste make make your code work but you can&rsquo;t copy and paste into your brain, so you won&rsquo;t learn from it.</strong></li>
+      <li><strong><strong>Ask your peers and coaches - </strong>Everyone here is at a different level of experience, at a different stage in Foundations and being challenged by different aspects. Perhaps one of your peers is a total wizard when it comes to working with arrays, while you&rsquo;re the guru on objects - why not fire them a message, join forces and help each other. Complementary skill sets are awesome, you get to combine the knowledge of multiple people, fill in each others&rsquo; knowledge gaps and help everyone around you succeed.Your coaches are even more knowledgeable, they wrote your course and come with a lot of experience, so if the sky is absolutely falling, or if you need help with an aspect of EDA rather than help with your code, they&rsquo;re the ultimate source of knowledge.</strong></li>
+      <li><strong><strong>Get reflecting! - </strong>There&rsquo;s a reason we reflect on each task and each sprint - it works! Not only is it a great way to get your brain to access information and work on neuroplasticity, it forces you into a bit of meta-thinking (that&rsquo;s thinking about your thinking). Look back at that last coding challenge you had, what was easy? What was a real challenge? Did you learn any neat tricks that helped you?Focus on those challenging aspects, figure out why they challenged you, learn the topics you weren&rsquo;t sure on, reinforce those tricks so you will remember them next time. Every task is a chance to learn, and every chance to learn makes your next task easier</strong></li>
+      <li><strong><strong>Make some tea! - </strong>This one wasn&rsquo;t on the list, but taking a few minutes to get away from your desk, go for a walk, get a fresh perspective and open up your tunnel vision is an awesome way to get past a roadblock.Plus I wanted another tea reference in here.</strong></li>
+    </ul>
+    <h2>Makes sense! But I thought you said there wouldn&rsquo;t be tea?</h2>
+    <p>
+      It was a trick! There&rsquo;s always tea! In fact, this time I even saved you some&hellip;
+    </p>
+    <img src='blog\tea.gif'> 
+  </div>
+</body>
+</html>
+  
